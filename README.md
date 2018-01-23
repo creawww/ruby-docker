@@ -1,4 +1,4 @@
-# DOCKER RUBY ON RAILS WIDTH DATABASE POSTGRES
+# DOCKER RUBY FOR RUBY ON RAILS 
 
 Un entorno docker para desarrollo de aplicaciones de Ruby on Rails con base de datos Postgres y entorno de test end to end con node webdriveio, nocha y selenium
 
