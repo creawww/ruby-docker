@@ -12,19 +12,7 @@ Si construimos la imagen con nombre se quedara en nuestro sistema y podremos usa
 
     docker run -it --rm --name=myapp -p 3000:3000 -v $PWD:/home/myuser/app -v $PWD/_bundle:/usr/local/bundle myruby /bin/bash
 
-Para no tener que escribir un comando tan largo he creado un .sh
-
-create file bash **runDocker.sh**
-
-    docker run -it --rm \
-    --name=myapp \
-    -p 3000:3000 \
-    -v $PWD:/home/myuser/app \
-    -v $PWD/_bundle:/usr/local/bundle \
-    myruby \
-    /bin/bash
-
-darle permisos de ejecucion **chmod +x runDocker.sh**, ya podemos ejecutar simplemente;
+Para no tener que escribir un comando tan largo he creado un **runDocker.sh**
 
     ./runDocker.sh
 
@@ -42,7 +30,7 @@ create de proyect rails
 
 add al .gitignore el directorio _bundle
 
-    _bundle/
+    /_bundle/*
 
 ejecutar las migraciones
 
@@ -73,4 +61,4 @@ Cuando tengamos que trabaja tenemos un terminal abierto arrancaremos el contened
     rspec
     ...
 
-Abriremos con nuestro editor los archivos de la carpeta y los cambios se actualizan impediatamente al tener los volumenes vinculados con el contenedor.
+Abriremos con nuestro editor los archivos de la carpeta y los cambios se actualizan inmediatamente al tener los volumenes vinculados con el contenedor.
