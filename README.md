@@ -34,7 +34,7 @@ add al .gitignore el directorio _bundle
 
 ejecutar las migraciones
 
-    rake db:create
+    rake db:migrate
 
 Arrancar el servidor de rails
 
