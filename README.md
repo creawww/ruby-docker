@@ -1,8 +1,16 @@
 # DOCKER RUBY FOR RUBY ON RAILS
 
-Un entorno docker para trabajar con Ruby e incluso Ruby on Rails, con DB sqlLite
+Un entorno docker para trabajar con Ruby y Ruby On Rails, con DB sqlLite
+
+contenedor preparado para trabajar con Ruby:2.5.1
+
+Si necesitar otra version simplemente cambia la primera linea del dockerfile
+
+FROM ruby:2.5.1
 
 ## construir la imagen si no existe
+
+La primera vez que clonamos el repo necesitamos construir la imagen con nombre propio.
 
 Si construimos la imagen con nombre se quedara en nuestro sistema y podremos usarla para todos los proyectos que la necesitemos
 
@@ -61,4 +69,6 @@ Cuando tengamos que trabaja tenemos un terminal abierto arrancaremos el contened
     rspec
     ...
 
-Abriremos con nuestro editor los archivos de la carpeta y los cambios se actualizan inmediatamente al tener los volumenes vinculados con el contenedor.
+Si se necesitamos otro terminal en el mismo contenedor nos unimos al mismo contain
+
+    docker exec -it myapp /bin/bash
